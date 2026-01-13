@@ -1,4 +1,4 @@
-:
+General:
     ✔ Create the github repository for the app @done(26-01-13 08:41)
     ✔ Set up NPM using TODO project stuff @done(26-01-13 08:41)
 
@@ -7,8 +7,38 @@
         ✔ It should get the dates between today and the next 7 days @done(26-01-13 10:26)
         ✔ They should be in format yyyy-MM-dd @done(26-01-13 10:33)
 
-    ☐ Create the function to call the weather API for a city
+    ✔ Create the function to call the weather API for a city @done(26-01-13 14:39)
         ✔ Figure out how to build the query to get the 7-day forecast @done(26-01-13 10:33)
         ✔ Date range request - should be today and then the next 7-days. @done(26-01-13 10:33)
-            ✔ This will use the Date-fns library @done(26-01-13 10:33)
+            ✔ This will use the Date-fns library @done(26-01-13 14:39)
+
+    ✔ Write the function to process the data into a useable object for display @done(26-01-13 15:17)
+        ✔ Location @done(26-01-13 14:55)
+        ✔ The temperature for today @done(26-01-13 15:12)
+        ✔ For each day (forecast.days, forecast.days, etc.) @done(26-01-13 15:20)
+            ✔ The day of the week @done(26-01-13 15:12)
+            ✔ The date of the day @done(26-01-13 15:00)
+            ✔ The high of the day @done(26-01-13 15:00)
+            ✔ The low of the day @done(26-01-13 15:00)
+            ✔ The type of precipitation, if any @done(26-01-13 15:00)
+    
+    ☐ Create a form
+    ☐ Add a search bar for the user to enter in a location
+    ☐ Make a search button to submit
+    ☐ Feed this information into your function to get weather data
+        ☐ Log the information to console
+    ☐ While this is loading, set the screen to be a loading symbol with placeholder card(s);
+    
+    ☐ Create a set of cards to display your weather data
+        ☐ One big card across the top for today's weather
+        ☐ 7 cards below that to display the 7-day forecast
+    Cards:
+        ☐ Each card should have The shorthand day of the week
+        ☐ An icon for the type of precipitation
+        ☐ The high displayed prominently
+        ☐ The low, displayed less prominently
+            ☐ Can just be an image; set the src with a function
+
+Remember. This is just a prototype. It's a lil test. It doesn't have to be perfect, it just has to work. Then you can improve.
+
         

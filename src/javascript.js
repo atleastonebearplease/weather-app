@@ -1,12 +1,10 @@
-import { format, formatDistance, formatRelative, addDays, DateArg } from "date-fns";
+import { format, formatDistance, formatRelative, addDays, DateArg, parseISO } from "date-fns";
 import weatherDataJSON from "./testResponse.json"
 
-function getSevenDayDateRange() {
+function getDateRange(daysFromNow) {
   let today = new Date(); 
 
-  console.log(format(today, "eee - M/dd"));
-
-  let weekFromToday = addDays(today, 6);
+  let weekFromToday = addDays(today, daysFromNow);
 
   return {
     today: format(today, "yyyy-MM-dd"), 
@@ -15,31 +13,47 @@ function getSevenDayDateRange() {
 }
 
 async function getWeatherData(city) {
-  let weekRange = getSevenDayDateRange();
+  let weekRange = getDateRange(7);
 
-  // const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/huntingdon%2C%20tennessee/${weekRange.today}/${weekRange.weekFromToday}?unitGroup=us&include=days,current&key=8ZEGCZEHNLG7BUTQE56KUANQL&contentType=json`);
+/*   const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/huntingdon%2C%20tennessee/${weekRange.today}/${weekRange.weekFromToday}?unitGroup=us&include=days,current&key=8ZEGCZEHNLG7BUTQE56KUANQL&contentType=json`);
 
-  //const weatherData = await response.json();
+  const weatherData = await response.json();
 
-  //return JSON.parse(weatherData);
+  console.log(weatherData);
 
+  return weatherData;
+ */
   let data = await weatherDataJSON;
 
   return data;
 }
 
+function processForecastData(data) {
+  let days = [];
+  
+  for(let i = 0; i < data.days.length; i++) {
+    const dayData = new Object();
+
+    let day = format(parseISO(data.days[i].datetime), "EEE"); //Mon, Tue, Wed, ...
+
+    dayData.dayOfWeek = day;
+    dayData.date = data.days[i].datetime;
+    dayData.high = data.days[i].tempmax;
+    dayData.low = data.days[i].tempmin;
+    dayData.precipitationType = data.days[i].preciptype ? data.days[i].preciptype[0] : "clear";
+
+    days.push(dayData);
+  }
+
+  return days;
+}
+
 function processWeatherData(data) {
   console.log(data);
 
-  let sevenDayForecast = [];
-
-  for(let i = 0; i < 7; i++) {
-    const dayData = new Object();
-
-    dayData.high = data.days[i].tempmax;
-    dayData.low = data.days[i].templow;
-
-    sevenDayForecast.push(dayData);
+  let sevenDayForecast = {
+    location: data.resolvedAddress,
+    forecast: processForecastData(data)
   }
 
   console.log(sevenDayForecast);
