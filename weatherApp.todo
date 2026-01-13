@@ -1,0 +1,14 @@
+:
+    ✔ Create the github repository for the app @done(26-01-13 08:41)
+    ✔ Set up NPM using TODO project stuff @done(26-01-13 08:41)
+
+    ✔ Gather the date for today and for the next seven days in the correct format for the query @done(26-01-13 10:33)
+        ✔ Write a function called get dates @done(26-01-13 10:26)
+        ✔ It should get the dates between today and the next 7 days @done(26-01-13 10:26)
+        ✔ They should be in format yyyy-MM-dd @done(26-01-13 10:33)
+
+    ☐ Create the function to call the weather API for a city
+        ✔ Figure out how to build the query to get the 7-day forecast @done(26-01-13 10:33)
+        ✔ Date range request - should be today and then the next 7-days. @done(26-01-13 10:33)
+            ✔ This will use the Date-fns library @done(26-01-13 10:33)
+        
