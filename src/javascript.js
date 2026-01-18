@@ -1,5 +1,26 @@
+import './styles.css'
+
 import { format, formatDistance, formatRelative, addDays, DateArg, parseISO } from "date-fns";
 import weatherDataJSON from "./testResponse.json"
+
+async function getWeatherData(city) {
+  
+  let searchQuery = city.replace(" ", "+");
+
+  let weekRange = getDateRange(7);
+
+  const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchQuery}/${weekRange.today}/${weekRange.weekFromToday}?unitGroup=us&include=days,current&key=8ZEGCZEHNLG7BUTQE56KUANQL&contentType=json`);
+
+  const weatherData = await response.json();
+
+  console.log(weatherData);
+
+  return weatherData;
+/* 
+  let data = await weatherDataJSON;
+
+  return data; */
+}
 
 function getDateRange(daysFromNow) {
   let today = new Date(); 
@@ -12,20 +33,15 @@ function getDateRange(daysFromNow) {
   }
 }
 
-async function getWeatherData(city) {
-  let weekRange = getDateRange(7);
+function processWeatherData(data) {
+  console.log(data);
 
-/*   const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/huntingdon%2C%20tennessee/${weekRange.today}/${weekRange.weekFromToday}?unitGroup=us&include=days,current&key=8ZEGCZEHNLG7BUTQE56KUANQL&contentType=json`);
+  let sevenDayForecast = {
+    location: data.resolvedAddress,
+    forecast: processForecastData(data)
+  }
 
-  const weatherData = await response.json();
-
-  console.log(weatherData);
-
-  return weatherData;
- */
-  let data = await weatherDataJSON;
-
-  return data;
+  console.log(sevenDayForecast);
 }
 
 function processForecastData(data) {
@@ -48,22 +64,24 @@ function processForecastData(data) {
   return days;
 }
 
-function processWeatherData(data) {
-  console.log(data);
+function searchForWeatherData(event) {
+  event.preventDefault();
 
-  let sevenDayForecast = {
-    location: data.resolvedAddress,
-    forecast: processForecastData(data)
-  }
+  let searchBar = document.querySelector("#weather-search");
 
-  console.log(sevenDayForecast);
+  let weatherPromise = getWeatherData(searchBar.value);
+
+  weatherPromise
+  .then(processWeatherData)
+  .then(displayForecast);
 }
 
-let weatherDataObj = getWeatherData("Huntingdon, TN");
+function displayForecast(data) {
+  console.log(data);
+}
+let searchForm = document.querySelector("form");
 
-weatherDataObj.then(processWeatherData);
-
-
+searchForm.addEventListener("submit", searchForWeatherData);
 
 
 /* 

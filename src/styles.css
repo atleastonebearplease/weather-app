@@ -8,3 +8,56 @@
     box-sizing: border-box;
     font-family: "Ubuntu-Sans", sans-serif;
 }
+
+.site-main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+
+    grid-template-rows: 5rem 1fr 2fr 5rem;
+    grid-template-columns: 1fr 10fr 1fr;
+}
+
+form {
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    background-color: blue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    padding-left: 2rem;
+}
+
+#weather-search {
+    height: 2rem;
+    width: 20rem;
+
+    border-style: none;
+
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+#search-button {
+    width: 6rem;
+    height: 2rem;
+    
+    border-style: none;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.today {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: darkolivegreen;
+}
+
+.forecast {
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    background-color: darkgoldenrod;
+}
