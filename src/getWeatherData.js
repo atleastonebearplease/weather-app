@@ -1,5 +1,6 @@
 import weatherDataJSON from "./testResponse.json"
 import { format, formatDistance, formatRelative, addDays, DateArg, parseISO } from "date-fns";
+import { displayWeatherData } from "./formatWeatherData";
 
 async function getWeatherData(city) {
   
@@ -17,13 +18,7 @@ async function getWeatherData(city) {
 
   console.log(weatherData);
 
-//   return weatherData;
-
-/* TESTING */
-  let data = await weatherDataJSON;
-
-  return data;
-/* TESTING */
+  return weatherData;
 }
 
 function getDateRange(daysFromNow) {
@@ -46,6 +41,8 @@ function processWeatherData(data) {
   }
 
   console.log(sevenDayForecast);
+
+  return sevenDayForecast;
 }
 
 function processForecastData(data) {
@@ -61,6 +58,8 @@ function processForecastData(data) {
     dayData.high = data.days[i].tempmax;
     dayData.low = data.days[i].tempmin;
     dayData.precipitationType = data.days[i].preciptype ? data.days[i].preciptype[0] : "clear";
+    dayData.precipitationChance = data.days[i].precipprob;
+    dayData.cloudCover = data.days[i].cloudcover;
 
     days.push(dayData);
   }
@@ -81,5 +80,5 @@ export function searchForWeatherData(event) {
 }
 
 function displayForecast(data) {
-  console.log(data);
+  displayWeatherData(data);
 }

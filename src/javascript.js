@@ -9,6 +9,9 @@ searchForm.addEventListener("submit", searchForWeatherData);
 
 addPlaceholders();
 
+let searchButton = document.querySelector("#search-button");
+searchButton.click();
+
 
 /* 
 ========================================================

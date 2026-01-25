@@ -36,10 +36,14 @@
 }
 
 .precipitation-type-icon {
-    background-color: black;
-    width: 80%;
-    height: 50%;
+    max-width: 80%;
+    max-height: 50%;
     align-self: center;
+}
+
+.precipitation-type-icon > img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .high {
