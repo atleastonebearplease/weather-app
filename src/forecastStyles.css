@@ -1,0 +1,57 @@
+.forecast {
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    background-color: darkgoldenrod;
+}
+
+.forecast-container {
+    width: 100%;
+    height: 20rem;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    justify-items: center;
+    justify-content: center;
+}
+
+.forecast__card {
+    width: 80%;
+    height: 90%;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.day-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.day-of-week {
+    font-size: 2rem;
+    align-self: center;
+}
+
+.precipitation-type-icon {
+    background-color: black;
+    width: 80%;
+    height: 50%;
+    align-self: center;
+}
+
+.high {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.low {
+    margin-left: 1rem;
+}
+
+.rain-chance {
+    margin-left: 1rem;
+}
+

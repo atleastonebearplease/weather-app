@@ -1,4 +1,6 @@
 @import url("josh-c-styles.css");
+@import url("forecastStyles.css");
+@import url("todayForecastStyles.css");
 
 :root {
     /*Variables here*/
@@ -14,7 +16,7 @@
     height: 100vh;
     display: grid;
 
-    grid-template-rows: 5rem 1fr 2fr 5rem;
+    grid-template-rows: 5rem 20rem 50rem 5rem;
     grid-template-columns: 1fr 10fr 1fr;
 }
 
@@ -38,6 +40,7 @@ form {
 
     border-radius: 1rem;
     border: 1px solid black;
+    padding-left: 1rem;
 }
 
 #search-button {
@@ -47,17 +50,4 @@ form {
     border-style: none;
     border-radius: 1rem;
     border: 1px solid black;
-}
-
-.today {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    background-color: darkolivegreen;
-}
-
-.forecast {
-    grid-row: 3/4;
-    grid-column: 2/3;
-
-    background-color: darkgoldenrod;
 }

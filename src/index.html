@@ -13,8 +13,35 @@
             <button type="submit" id="search-button">Search</button>
         </form>
 
-        <div class="today"></div>
-        <div class="forecast"></div>
+        <div class="today">
+            <div class="today__card">
+                <div class="today__title">Today - <span id="forecast-location">Huntingdon, TN, United States</span></div>
+                <div class="today__forecast">
+                    <h1>High:<span id="today-high"></span></h1>
+                    <h2>Low:<span id="today-low"></span></h2>
+                    <h2><span id="today-precipitation">Clear</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="forecast">
+            <div class="forecast-container">
+                <div class="forecast__card">
+                    <div class="day-info">
+                        <p class="day-of-week"><span>Mon - 1/19</span></p>
+                        <p><div class="precipitation-type-icon"></div></p>
+                        <p class="high"><span>75</span>&deg;F</p>
+                        <p class="low"><span>40</span>&deg;F</p>
+                        <p class="rain-chance"><span>80%</span></p>
+                    </div>
+                </div>
+                <div class="forecast__card">Tue</div>
+                <div class="forecast__card">Wed</div>
+                <div class="forecast__card">Thu</div>
+                <div class="forecast__card">Fri</div>
+                <div class="forecast__card">Sat</div>
+                <div class="forecast__card">Sun</div>
+            </div>
+        </div>
     </div>
 
 </body>
