@@ -1,22 +1,16 @@
-General:
-    Function to display the placeholders for before a search is done and while a search is completing:
-        Helper functions/store references?
-        ✔ Fill the today section pieces with info @done(26-01-25 10:34)
-        ✔ Cycle through each card and fill them with info @done(26-01-25 10:34)
+General: 
+    ☐ Now we work on design. Remember your notes in here: https://share.evernote.com/note/91a16775-cdd6-65e4-c368-0b3ae7b613eb (Good Web Design Doc)
 
-    Function to display a loading screen over the page, or a part of the page:
 
-    Function to display the found weather data:
-        ☐ Grab the stuff for today and add it
-        ☐ Grab the forecast and add it
-
-        ☐ Write a function to choose a precipiation icon
     
-
 Remember. This is just a prototype. It's a lil test. It doesn't have to be perfect, it just has to work. Then you can improve.
 
-
 Archive:
+  ✔ Fill the today section pieces with info @done(26-01-25 10:34) @project(General.Function to display the placeholders for before a search is done and while a search is completing)
+  ✔ Cycle through each card and fill them with info @done(26-01-25 10:34) @project(General.Function to display the placeholders for before a search is done and while a search is completing)
+  ✔ Grab the stuff for today and add it @done(26-01-25 14:36) @project(General.Function to display the found weather data)
+  ✔ Grab the forecast and add it @done(26-01-25 14:36) @project(General.Function to display the found weather data)
+  ✔ Write a function to choose a precipiation icon @done(26-01-25 14:36) @project(General.Function to display the found weather data)
   ✔ Create the github repository for the app @done(26-01-13 08:41) @project(General)
   ✔ Set up NPM using TODO project stuff @done(26-01-13 08:41) @project(General)
   ✔ Gather the date for today and for the next seven days in the correct format for the query @done(26-01-13 10:33) @project(General)
