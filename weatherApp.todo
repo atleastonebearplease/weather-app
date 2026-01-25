@@ -1,44 +1,56 @@
 General:
-    ✔ Create the github repository for the app @done(26-01-13 08:41)
-    ✔ Set up NPM using TODO project stuff @done(26-01-13 08:41)
+    Function to display the placeholders for before a search is done and while a search is completing:
+        Helper functions/store references?
+        ✔ Fill the today section pieces with info @done(26-01-25 10:34)
+        ✔ Cycle through each card and fill them with info @done(26-01-25 10:34)
 
-    ✔ Gather the date for today and for the next seven days in the correct format for the query @done(26-01-13 10:33)
-        ✔ Write a function called get dates @done(26-01-13 10:26)
-        ✔ It should get the dates between today and the next 7 days @done(26-01-13 10:26)
-        ✔ They should be in format yyyy-MM-dd @done(26-01-13 10:33)
+    Function to display a loading screen over the page, or a part of the page:
 
-    ✔ Create the function to call the weather API for a city @done(26-01-13 14:39)
-        ✔ Figure out how to build the query to get the 7-day forecast @done(26-01-13 10:33)
-        ✔ Date range request - should be today and then the next 7-days. @done(26-01-13 10:33)
-            ✔ This will use the Date-fns library @done(26-01-13 14:39)
+    Function to display the found weather data:
+        ☐ Grab the stuff for today and add it
+        ☐ Grab the forecast and add it
 
-    ✔ Write the function to process the data into a useable object for display @done(26-01-13 15:17)
-        ✔ Location @done(26-01-13 14:55)
-        ✔ The temperature for today @done(26-01-13 15:12)
-        ✔ For each day (forecast.days, forecast.days, etc.) @done(26-01-13 15:20)
-            ✔ The day of the week @done(26-01-13 15:12)
-            ✔ The date of the day @done(26-01-13 15:00)
-            ✔ The high of the day @done(26-01-13 15:00)
-            ✔ The low of the day @done(26-01-13 15:00)
-            ✔ The type of precipitation, if any @done(26-01-13 15:00)
+        ☐ Write a function to choose a precipiation icon
     
-    ☐ Create a form
-    ☐ Add a search bar for the user to enter in a location
-    ☐ Make a search button to submit
-    ☐ Feed this information into your function to get weather data
-        ☐ Log the information to console
-    ☐ While this is loading, set the screen to be a loading symbol with placeholder card(s);
-    
-    ☐ Create a set of cards to display your weather data
-        ☐ One big card across the top for today's weather
-        ☐ 7 cards below that to display the 7-day forecast
-    Cards:
-        ☐ Each card should have The shorthand day of the week
-        ☐ An icon for the type of precipitation
-        ☐ The high displayed prominently
-        ☐ The low, displayed less prominently
-            ☐ Can just be an image; set the src with a function
 
 Remember. This is just a prototype. It's a lil test. It doesn't have to be perfect, it just has to work. Then you can improve.
 
-        
+
+Archive:
+  ✔ Create the github repository for the app @done(26-01-13 08:41) @project(General)
+  ✔ Set up NPM using TODO project stuff @done(26-01-13 08:41) @project(General)
+  ✔ Gather the date for today and for the next seven days in the correct format for the query @done(26-01-13 10:33) @project(General)
+  ✔ Write a function called get dates @done(26-01-13 10:26) @project(General)
+  ✔ It should get the dates between today and the next 7 days @done(26-01-13 10:26) @project(General)
+  ✔ They should be in format yyyy-MM-dd @done(26-01-13 10:33) @project(General)
+  ✔ Create the function to call the weather API for a city @done(26-01-13 14:39) @project(General)
+  ✔ Figure out how to build the query to get the 7-day forecast @done(26-01-13 10:33) @project(General)
+  ✔ Date range request - should be today and then the next 7-days. @done(26-01-13 10:33) @project(General)
+  ✔ This will use the Date-fns library @done(26-01-13 14:39) @project(General)
+  ✔ Write the function to process the data into a useable object for display @done(26-01-13 15:17) @project(General)
+  ✔ Location @done(26-01-13 14:55) @project(General)
+  ✔ The temperature for today @done(26-01-13 15:12) @project(General)
+  ✔ For each day (forecast.days, forecast.days, etc.) @done(26-01-13 15:20) @project(General)
+  ✔ The day of the week @done(26-01-13 15:12) @project(General)
+  ✔ The date of the day @done(26-01-13 15:00) @project(General)
+  ✔ The high of the day @done(26-01-13 15:00) @project(General)
+  ✔ The low of the day @done(26-01-13 15:00) @project(General)
+  ✔ The type of precipitation, if any @done(26-01-13 15:00) @project(General)
+  ✔ Create a form @done(26-01-18 13:05) @project(General)
+  ✔ Add a search bar for the user to enter in a location @done(26-01-18 13:05) @project(General)
+  ✔ Make a search button to submit @done(26-01-18 13:05) @project(General)
+  ✔ Feed this information into your function to get weather data @done(26-01-19 08:54) @project(General)
+  ✔ Log the information to console @done(26-01-19 08:54) @project(General)
+  ✔ Create a set of cards to display your weather data @done(26-01-20 08:54) @project(General)
+  ✔ One big card across the top for today's weather @done(26-01-20 08:54) @project(General)
+  ✔ 7 cards below that to display the 7-day forecast @done(26-01-20 08:54) @project(General)
+  ✔ We should display the location across the top @done(26-01-20 08:54) @project(General.Today Card)
+  ✔ Just the word Today: @done(26-01-20 08:54) @project(General.Today Card)
+  ✔ The high in larger text @done(26-01-25 06:31) @project(General.Today Card)
+  ✔ The low in smaller text @done(26-01-25 06:31) @project(General.Today Card)
+  ✔ And the precipitation type @done(26-01-25 06:31) @project(General.Today Card)
+  ✔ Each card should have The shorthand day of the week @done(26-01-25 06:32) @project(General.Cards)
+  ✔ An icon for the type of precipitation @done(26-01-25 06:32) @project(General.Cards)
+  ✔ The high displayed prominently @done(26-01-25 06:32) @project(General.Cards)
+  ✔ The low, displayed less prominently @done(26-01-25 06:32) @project(General.Cards)
+  ✔ Can just be an image; set the src with a function @done(26-01-25 06:32) @project(General.Cards)
