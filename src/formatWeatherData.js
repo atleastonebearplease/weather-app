@@ -1,13 +1,13 @@
 import { format, formatDistance, formatRelative, addDays, DateArg, parseISO } from "date-fns";
 
 const weatherIcons = {
-    clear: "sun.png",
-    partlyCloudy: "partly-cloudy.png",
-    cloudy: "clouds.png",
-    rain: "rainy.png",
-    snow: "snowy.png",
-    freezingRain: "freezing-rain.png",
-    ice: "ice.png"
+    clear: "imgs/sun.png",
+    partlyCloudy: "imgs/partly-cloudy.png",
+    cloudy: "imgs/clouds.png",
+    rain: "imgs/rainy.png",
+    snow: "imgs/snowy.png",
+    freezingRain: "imgs/freezing-rain.png",
+    ice: "imgs/ice.png"
 }
 
 /* 
