@@ -11,6 +11,11 @@
     font-family: "Ubuntu-Sans", sans-serif;
 }
 
+body {
+    background: #a4fcfb;
+    background: linear-gradient(180deg, rgba(164, 252, 251, 1) 1%, rgba(125, 203, 219, 1) 70%, rgba(50, 180, 255, 1) 100%);
+}
+
 .site-main {
     width: 100vw;
     height: 100vh;
@@ -20,16 +25,20 @@
     grid-template-columns: 1fr 10fr 1fr;
 }
 
-form {
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    
     grid-row: 1/2;
     grid-column: 2/3;
+}
 
-    background-color: blue;
+
+form {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    
-    padding-left: 2rem;
+
+    width: 80%;
 }
 
 #weather-search {

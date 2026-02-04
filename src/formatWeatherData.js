@@ -44,7 +44,8 @@ function getTodayObject() {
         location: get("#forecast-location"), 
         high: get("#today-high"),
         low: get("#today-low"),
-        precipitation: get("#today-precipitation")
+        precipitation: get("#today-precipitation"),
+        precipiationIcon: document.querySelector(".today .precipitation-type-icon")
     }
 }
 
@@ -91,6 +92,8 @@ function addWeatherDataToToday(data) {
     today.low.innerText = data.forecast[0].low;
 
     let toCapital = data.forecast[0].precipitationType;
+
+    today.precipiationIcon.src = getWeatherIcon(data.forecast[0].precipitationType, data.forecast[0].cloudCover);
 
 
     today.precipitation.innerText = toCapital.charAt(0).toUpperCase() + toCapital.slice(1);

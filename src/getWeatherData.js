@@ -8,12 +8,12 @@ async function getWeatherData(city) {
 
   let weekRange = getDateRange(7);
 
-//   const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchQuery}/${weekRange.today}/${weekRange.weekFromToday}?unitGroup=us&include=days,current&key=8ZEGCZEHNLG7BUTQE56KUANQL&contentType=json`);
+  const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchQuery}/${weekRange.today}/${weekRange.weekFromToday}?unitGroup=us&include=days,current&key=8ZEGCZEHNLG7BUTQE56KUANQL&contentType=json`);
 
-//   const weatherData = await response.json();
+  const weatherData = await response.json();
 
 /* TESTING */
-  const weatherData = weatherDataJSON;
+  //const weatherData = weatherDataJSON;
 /* TESTING */
 
   console.log(weatherData);
